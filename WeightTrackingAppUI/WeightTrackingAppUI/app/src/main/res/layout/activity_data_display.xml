@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DataDisplayActivity">
+
+    <TextView
+        android:id="@+id/dataTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your Progress"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp" />
+
+    <TableLayout
+        android:id="@+id/dataTable"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:stretchColumns="*"
+        app:layout_constraintTop_toBottomOf="@id/dataTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="16dp">
+
+        <!-- Header Row -->
+        <TableRow>
+            <TextView android:text="Date" android:textStyle="bold"/>
+            <TextView android:text="Weight" android:textStyle="bold"/>
+            <TextView android:text="Delete" android:textStyle="bold"/>
+        </TableRow>
+
+        <!-- Sample -->
+        <TableRow>
+            <TextView android:text="04/01"/>
+            <TextView android:text="195 lbs"/>
+            <Button android:text="Delete"/>
+        </TableRow>
+
+        <!-- Sample 2 -->
+        <TableRow>
+            <TextView android:text="04/02"/>
+            <TextView android:text="193 lbs"/>
+            <Button android:text="Delete"/>
+        </TableRow>
+
+    </TableLayout>
+
+    <Button
+        android:id="@+id/addEntryButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Entry"
+        app:layout_constraintTop_toBottomOf="@id/dataTable"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
